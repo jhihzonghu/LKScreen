@@ -14,6 +14,9 @@ public class ScreenMonitor extends BroadcastReceiver {
 
         if(intent.getAction().equals((Intent.ACTION_SCREEN_ON)))
         {
+            Intent intent1 = new Intent(context,MainActivity.class);
+            intent1.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(intent1);
             Toast.makeText(context,"Receive",Toast.LENGTH_SHORT).show();
         }
     }
