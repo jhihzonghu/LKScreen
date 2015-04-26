@@ -10,14 +10,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowManager;
 
-import com.felipecsl.gifimageview.library.GifImageView;
+
+
+import pl.droidsonroids.gif.GifDrawable;
+import pl.droidsonroids.gif.GifImageView;
 
 
 public class MainActivity extends ActionBarActivity {
     private IntentFilter intentFilter ;
     private ScreenMonitor screenMonitor;
     private Intent ScreenService;
-
+    private GifImageView gifImageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
@@ -26,6 +29,8 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         ScreenService = new Intent(this,ScreenService.class);
         startService(ScreenService);
+        gifImageView =(GifImageView)findViewById(R.id.giv);
+        gifImageView.setImageResource(R.drawable.bear);
 
 
     }
