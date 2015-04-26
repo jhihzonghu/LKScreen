@@ -2,17 +2,22 @@ package com.example.eclab.lcscreen;
 
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowManager;
 
+import com.felipecsl.gifimageview.library.GifImageView;
+
 
 public class MainActivity extends ActionBarActivity {
     private IntentFilter intentFilter ;
     private ScreenMonitor screenMonitor;
     private Intent ScreenService;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
@@ -21,6 +26,13 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         ScreenService = new Intent(this,ScreenService.class);
         startService(ScreenService);
+
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
 
     }
 
@@ -34,6 +46,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onDestroy() {
         super.onDestroy();
         stopService(ScreenService);
+
     }
 
     @Override

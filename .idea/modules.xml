@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/LCScreen.iml" filepath="$PROJECT_DIR$/LCScreen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LKScreen.iml" filepath="$PROJECT_DIR$/LKScreen.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
